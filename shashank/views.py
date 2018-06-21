@@ -4,8 +4,8 @@ from django.core.urlresolvers import reverse_lazy
 from .models import Album
 
 
-class IndexView(genric.ListView):
-    template_name = 'music/index.html'
+class IndexView(generic.ListView):
+    template_name = 'shashank/index.html'
     context_object_name = 'all_albums'
 
     def get_queryset(self):
@@ -13,7 +13,7 @@ class IndexView(genric.ListView):
 
 class DetailView(generic.DetailView):
     model = Album
-    template_name = 'music/detail.html'
+    template_name = 'shashank/detail.html'
 
 class AlbumCreate(CreateView):
     model = Album
