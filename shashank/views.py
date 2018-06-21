@@ -1,4 +1,5 @@
 from django.views import generic
+from django.views.generic.edit import CreateView
 from .models import Album
 
 class IndexView(genric.ListView):
