@@ -1,7 +1,12 @@
 from django.views import generic
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from django.core.urlresolvers import reverse_lazy
+from django.shortcuts import render, redirect
+from django.contrib.uth import authenticate, login
+from django.views import generic
+from django.views.generic import View
 from .models import Album
+from .forms import UserForm
 
 
 class IndexView(generic.ListView):
