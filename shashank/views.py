@@ -64,3 +64,5 @@ class UserFormView(View):
 
                     login(request, user)
                     return redirect('shashank:index')
+
+        return render(request, slef.template_name, {'form':form})
